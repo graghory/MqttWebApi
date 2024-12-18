@@ -1,9 +1,11 @@
 using MqttWebApi;
+using MqttWebApi.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Register MqttService and MqttService1 as scoped services
 builder.Services.AddScoped<MqttService>();
+builder.Services.AddScoped<AairosService>();
 
 // Add services to the container.
 builder.Services.AddSingleton<MqttService>();
